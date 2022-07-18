@@ -1,0 +1,69 @@
+
+.footer
+    background-color: $accent-color
+    border-top: 1px solid #849ae1
+
+.footerContainerDiv
+    position: relative
+    height: 480px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    color: #fff
+    font-size: 14px
+    margin-bottom: 120px
+
+.footerContainerDiv img 
+    width: 180px
+    height: 54px
+
+.footerUl
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 155px
+    color: #fff
+    font-size: 14px
+
+.footerContainerDivlogo
+     p
+        width: 180px
+
+.footerUl
+    li:nth-child(1)
+        opacity: 0.6
+        height: 17px
+        padding-top: 50px
+        padding-bottom: 120px
+
+.footerUl li:not(li:nth-child(1)) 
+  margin-bottom: 30px
+
+.footerUl
+    li:last-child
+        position: absolute
+        bottom: 0
+        margin-bottom: 0 !important
+
+.footerListcontainer
+    display: flex
+    justify-content: space-around
+    color: white
+
+.footerContainerDivlogo
+    padding-top: 170px
+
+.line
+    border-right: 2px solid #758edd
+
+    
+
+@media screen and (max-width: 900px) 
+    .footerUl li:nth-child(1)
+        display: none
+
+    .footerListcontainer
+        justify-content: space-between
+        flex-wrap: wrap
+
+

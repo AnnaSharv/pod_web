@@ -1,0 +1,346 @@
+$accent-color : #4264d0
+$accent-color-bright : #657FEF
+
+
+@mixin nav-links
+    font-size: 14px 
+    color: #161618 
+    padding: 0 !important
+    margin: 0 15px 
+
+@mixin select-language
+    height: 36px
+    width: 80px
+    border-radius: 3px
+    font-size: 14px
+    font-weight: 700
+    background: #e6e6e6
+    border: 0
+    padding: 9px 20px
+  
+@mixin banner-div
+    h1
+        font-size: calc(1.8rem + 1vw)
+        font-weight: 700
+        text-align: center
+        margin-bottom: 30px
+        line-height: calc(2.1rem + 1vw)
+
+    p
+        font-family: Lato
+        font-size: 18px
+        font-weight: 500
+        line-height: 21.6px
+        letter-spacing: 0em
+        text-align: center
+
+@mixin landingPageBtn
+    position: relative
+    width: 280px
+    color: #fff
+    font-size: 18px
+    font-weight: 700
+    line-height: 21.6px
+    background: #161618
+    padding: 20px
+    border: 0
+    text-align: left
+    &:after
+        content: url('../assets/btn_arrows.png')
+        position: absolute
+        right: 0
+        height: 100%
+        top: 0
+        border-left: 1px solid
+        padding: 20px
+        color: #92979b
+    &:hover
+        background: $accent-color
+    
+
+body
+    overflow-X: hidden
+    scroll-behavior: smooth
+
+.form-select
+    background-image: url('../assets/arrow-select.png') !important
+    background-repeat: no-repeat !important
+    background-position: right 1.2rem center !important
+    background-size: 5px 8px !important
+
+
+.form-select:focus
+    border-color: none
+
+.my-navbar
+    background: transparent
+   
+    width: 100%
+    z-index: 1111
+    .nav-link
+        @include nav-links
+
+.select
+    @include select-language
+
+.banner
+    @include banner-div
+
+.sectionWelcome
+    position: relative
+    height: 85vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+.lpButtonContainer
+    display: flex
+    justify-content: center
+
+.lpButton
+    @include landingPageBtn
+
+.flexButtons
+    display: flex
+  
+    justify-content: center
+    margin-top: 60px
+
+
+.sectionInfo
+    background-color: $accent-color
+    overflow: hidden
+    padding-bottom: 120px
+
+
+.panel
+    position: relative
+    font-size: 24px
+    padding: 45px 0
+    color: #fff
+    font-weight: 700
+    &::after
+        content: ""
+        display: flex
+        width: 300%
+        height: 1px
+        background: #fff
+        bottom: 0
+        position: absolute
+        left: -104%
+        opacity: 0.4
+
+
+// section info
+.infoCard
+   border-radius: 10px
+   max-width: 480px
+   background-color: $accent-color-bright
+   color: #fff
+   padding: 4.5vw
+
+.infoPhoto
+    max-width: 380px
+    max-height: 180px
+    display: block
+    margin: auto
+    object-fit: contain
+
+.infoButton
+    background-color: transparent
+    padding: 0
+    font-size: 18px
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &:after
+        border-left: 0 
+        padding: 0px
+        display: flex
+        justify-content: center
+
+.flexButtonsInfo
+    justify-content: space-between
+
+.infoCardTitle
+    margin: 13% 0 6%
+    font-size: 24px
+    font-weight: 700
+
+.infoCardTitleP
+    margin-bottom: 20%
+    font-size: 18px
+
+
+// about aboutUsPanel
+.aboutUsContainer 
+    overflow: hidden
+    background: white
+    border-radius: 10px
+    margin-top: 140px
+
+.aboutUsPanel
+    color: #161618
+    background-color: #fff
+    padding-left: 4.5vw
+    &:after
+        background: #161618
+
+.aboutUsTitle
+    padding-top: 3.5%
+    padding-bottom: 9%
+    margin: 0
+
+.aboutUsText
+    padding: 0px 15vw
+
+.aboutUsRow
+    grid-row-gap: 60px
+
+.aboutUsInfo
+    display: flex
+    align-items: center
+    grid-column-gap: 38px
+    font-size: 14px
+    line-height: 16.8px
+    font-weight: 700
+    margin-bottom: 120px
+
+.col-half
+    font-size: 18px
+
+.col-full
+    font-size: 24px
+
+.aboutUsBanner
+    padding-top: 120px
+    margin-bottom: 120px
+    color: #fff
+    position: relative
+
+.aboutUsBanner p 
+    position: absolute
+    left: 0
+    bottom: 0
+    text-align: left
+    opacity: 0.4
+
+
+//footer
+@import footer
+
+// animation
+@import animatedBG
+
+
+@media only screen and (max-width: 990px)
+    .line
+        border-right: none
+
+    .sectionWelcome
+        height: 100vh
+
+    .banner p 
+        font-size: 14px
+        font-weight: 700
+        line-height: 16.8px
+
+
+    .panelInfo
+        font-size: 0
+        height: 32px
+        padding: 0
+    
+    .aboutUsBanner
+        padding-top: 60px
+        margin-bottom: 30px
+        h1 
+            text-align: left
+        p
+            position: relative
+
+    .flexButtonsInfo 
+        flex-wrap: wrap
+        grid-row-gap: 60px
+        .infoCard
+            padding: 30px
+
+    .aboutUsContainer
+        margin-top: 60px
+        padding: 30px 30px 0px 30px
+        div
+            text-align: left
+
+        .aboutUsPanel,  
+        .aboutUsTitle,
+        .aboutUsText
+            text-align: left
+            padding: 0
+
+        .footerContainerDivlogo
+            padding-top: 60px
+            display: block
+            height: 100%
+            margin: 0
+
+    .p
+        display: none
+
+    .displayOnSmallerScreen
+        display: block !important
+
+    
+    .aboutUsPanel
+        padding-bottom: 30px !important
+
+    .aboutUsTitle
+        margin: 0
+        text-align: left
+        padding: 60px 0
+
+    .col-full
+        font-size: 21px
+
+    .sectionInfo
+        padding-bottom: 60px
+
+
+    .footerContainerDivlogo
+        padding: 30px 0 42px 0
+        height: 100%
+        display: block
+        margin: 0
+        font-size: 27px
+        font-weight: 700
+
+
+
+
+
+.footerListcontainer
+    justify-content: space-between
+    grid-row-gap: 70px
+
+.footerUl-1
+    order: 1
+    width: 50%
+
+.footerUl-2
+    order: 2
+    width: 50%
+
+.footer-large-p
+    order: 3
+    width: 100%
+    justify-content: space-between
+    display: grid !important
+    grid-template-columns: 1fr 1fr
+    grid-column-gap: 0 !important
+
+.footerUl li:last-child
+    display: none
+
+.pp
+    display: grid !important
+    grid-template-columns: 1fr 1fr
