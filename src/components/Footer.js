@@ -12,14 +12,14 @@ function Footer(props) {
     <div className={`footer ${props.cClassName}`}>
         <Container>
             <Row>
-                <Col md={3} xs={12} className="line">
+                <Col lg={3} md={12} xs={12} className="line">
                     <div className="footerContainerDiv footerContainerDivlogo">
                         <div className="text-center displayOnSmallerScreen d-none">Podsolutionshopify</div>
-                        <img src={PodlogoWhite}  className="p"/>
+                        <img src={PodlogoWhite}  className="p" alt="POD_logo"/>
                         <p className="p">Find the right print-on-demand printing company for your shop in minutes. With our fully automated</p>
                     </div>
                 </Col>
-                <Col md={9} xs={12}>
+                <Col lg={9} md={12} xs={12}>
                     <div className="footerContainerDiv">
                         <div className="footerListcontainer">
                             <ul className="footerUl footerUl-1">

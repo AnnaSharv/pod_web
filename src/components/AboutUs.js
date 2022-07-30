@@ -25,7 +25,7 @@ function AboutUs() {
                 </Col>
                 <Col className="aboutUsInfo ">
                    <div>We work <br/> Different platforms</div>
-                   <div><img src={ShopifyLogo} /></div>
+                   <div><img src={ShopifyLogo} alt="Shopify" /></div>
                 </Col>
             </Row>
         </Container>

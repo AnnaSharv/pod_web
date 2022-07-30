@@ -1,6 +1,34 @@
+:root   
+    font-size: 18px
+a 
+    text-decoration: none !important
+
 $accent-color : #4264d0
 $accent-color-bright : #657FEF
 
+.btn-check:focus+.btn-primary,
+.btn-primary:focus 
+    color: #fff
+    background-color: $accent-color
+    border-color: $accent-color
+    box-shadow: none !important
+.card-body 
+    .btn-primary:hover
+        background: none
+.navbar-toggler
+    border: none 
+    &:focus
+        box-shadow: none !important
+
+.selectNavbar
+    min-width: 118px
+    justify-content: flex-end
+
+.my-navbar-container
+    padding-top: 40px
+    position: fixed
+    width: 100%
+    z-index: 111
 
 @mixin nav-links
     font-size: 14px 
@@ -25,10 +53,12 @@ $accent-color-bright : #657FEF
         text-align: center
         margin-bottom: 30px
         line-height: calc(2.1rem + 1vw)
-
+    h3
+        font-size: 24px
+        font-weight: 700
+        margin-bottom: 30px
     p
         font-family: Lato
-        font-size: 18px
         font-weight: 500
         line-height: 21.6px
         letter-spacing: 0em
@@ -38,11 +68,10 @@ $accent-color-bright : #657FEF
     position: relative
     width: 280px
     color: #fff
-    font-size: 18px
     font-weight: 700
     line-height: 21.6px
     background: #161618
-    padding: 20px
+    padding: 20px !important
     border: 0
     text-align: left
     &:after
@@ -54,6 +83,8 @@ $accent-color-bright : #657FEF
         border-left: 1px solid
         padding: 20px
         color: #92979b
+        display: grid !important
+        place-content: center
     &:hover
         background: $accent-color
     
@@ -74,11 +105,13 @@ body
 
 .my-navbar
     background: transparent
-   
+    padding: 0
     width: 100%
     z-index: 1111
     .nav-link
         @include nav-links
+
+
 
 .select
     @include select-language
@@ -88,7 +121,7 @@ body
 
 .sectionWelcome
     position: relative
-    height: 85vh
+    height: 95vh
     display: flex
     flex-direction: column
     justify-content: center
@@ -149,7 +182,6 @@ body
 .infoButton
     background-color: transparent
     padding: 0
-    font-size: 18px
     width: 100%
     display: flex
     justify-content: space-between
@@ -170,7 +202,6 @@ body
 
 .infoCardTitleP
     margin-bottom: 20%
-    font-size: 18px
 
 
 // about aboutUsPanel
@@ -207,9 +238,6 @@ body
     font-weight: 700
     margin-bottom: 120px
 
-.col-half
-    font-size: 18px
-
 .col-full
     font-size: 24px
 
@@ -234,88 +262,21 @@ body
 @import animatedBG
 
 
-@media only screen and (max-width: 990px)
-    .line
-        border-right: none
 
-    .sectionWelcome
-        height: 100vh
+//merchant
+@import merchants
 
-    .banner p 
-        font-size: 14px
-        font-weight: 700
-        line-height: 16.8px
-
-
-    .panelInfo
-        font-size: 0
-        height: 32px
-        padding: 0
-    
-    .aboutUsBanner
-        padding-top: 60px
-        margin-bottom: 30px
-        h1 
-            text-align: left
-        p
-            position: relative
-
-    .flexButtonsInfo 
-        flex-wrap: wrap
-        grid-row-gap: 60px
-        .infoCard
-            padding: 30px
-
-    .aboutUsContainer
-        margin-top: 60px
-        padding: 30px 30px 0px 30px
-        div
-            text-align: left
-
-        .aboutUsPanel,  
-        .aboutUsTitle,
-        .aboutUsText
-            text-align: left
-            padding: 0
-
-        .footerContainerDivlogo
-            padding-top: 60px
-            display: block
-            height: 100%
-            margin: 0
-
-    .p
-        display: none
-
-    .displayOnSmallerScreen
-        display: block !important
-
-    
-    .aboutUsPanel
-        padding-bottom: 30px !important
-
-    .aboutUsTitle
-        margin: 0
-        text-align: left
-        padding: 60px 0
-
-    .col-full
-        font-size: 21px
-
-    .sectionInfo
-        padding-bottom: 60px
-
-
-    .footerContainerDivlogo
-        padding: 30px 0 42px 0
-        height: 100%
-        display: block
-        margin: 0
-        font-size: 27px
-        font-weight: 700
+//companies
+@import companies
+.nofixednav
+    position: relative
 
 
 
+.photoRev
+        .testsquare
+            margin-left: auto 
+ 
 
 
 .footerListcontainer
@@ -344,3 +305,150 @@ body
 .pp
     display: grid !important
     grid-template-columns: 1fr 1fr
+
+
+@media only screen and (max-width: 991px)
+    .line
+        border-right: none
+
+   
+    .my-navbar-container
+        padding-inline: 37px
+        .my-navbar
+            min-height: 150px
+            display: grid
+            align-items: center
+            justify-content: flex-start !important
+            margin-bottom: 20px
+            margin-top: 20px
+            a
+                margin: 0
+   
+    .banner
+        h1
+            font-size: 32px !important
+        p
+            font-size: 14px
+            font-weight: 700
+            line-height: 16.8px
+            padding: 0 37px
+    .sectionInfo
+        .container
+            padding: 0 37px
+    .panelInfo
+        font-size: 0
+        height: 32px
+        padding: 0
+    .aboutUsBanner
+        padding-top: 60px
+        margin-bottom: 30px
+        h1
+            text-align: left
+        p
+            position: relative
+            padding: 0
+    .flexButtonsInfo
+        flex-wrap: wrap
+        justify-content: center
+        grid-row-gap: 60px
+        .infoCard
+            padding: 30px
+    .aboutUsContainer
+        margin-top: 60px
+        padding: 37px
+        div
+            text-align: left
+        .aboutUsPanel,
+        .aboutUsTitle,
+        .aboutUsText
+            text-align: left
+            padding: 0
+        .footerContainerDivlogo
+            padding-top: 60px
+            display: block
+            height: 100%
+            margin: 0
+        .aboutUsTitle
+            h1
+                margin-top: 30px
+                text-align: left
+    .aboutUsInfo
+        margin-bottom: 60px
+    .aboutUsRow
+        grid-row-gap: 42px
+    .p
+        display: none
+    .displayOnSmallerScreen
+        display: block !important
+    .aboutUsPanel
+        padding-bottom: 30px !important
+    .aboutUsTitle
+        margin: 0
+        text-align: left
+        padding: 60px 0
+    .col-full
+        font-size: 21px
+    .sectionInfo
+        padding-bottom: 60px
+    .footerContainerDivlogo
+        padding: 30px 0 42px 0
+        height: 100%
+        display: block
+        margin: 0
+        font-size: 27px
+        font-weight: 700      
+    .sectionWelcome
+        height: 120vh
+        .banner 
+            padding: 0 37px !important
+        .flexButtons 
+            .row 
+                width: 100% !important
+                grid-row-gap: 20px 
+
+@media only screen and (min-width: 768px) and (max-width: 1200px)
+    .sectionInfo
+        .flexButtons 
+            display: grid
+            grid-template-columns: 1fr 1fr
+//merchant responsive
+@media only screen and (max-width: 992px)
+    .aboutUsContainer 
+        .panel 
+            padding: 0 0 37px !important
+    .row
+        *
+            padding: 0
+            margin: 0
+    .banner
+        p
+            padding: 0
+    .row
+        margin: 0
+        padding: 0
+    .container
+        padding: 0 37px
+    .flexButtons
+        margin-top: 60px
+        margin-bottom: 60px
+        justify-content: start
+    .benefitsDivContainer,
+    .panel,
+    .contactUsShortContainer
+        padding: 37px !important
+        div
+            grid-row-gap: 30px
+    .textphotoContainer
+        div
+            padding: 0
+            div
+                padding: 0
+                grid-row-gap: 30px
+    .diagram
+        width: 100%
+    .PodfeaturesContainer
+        grid-template-rows: 200px auto
+
+@media only screen and (max-width: 600px)
+    .infoButton
+        padding-left: 0 !important

@@ -1,3 +1,42 @@
+:root {
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.btn-check:focus + .btn-primary,
+.btn-primary:focus {
+  color: #fff;
+  background-color: #4264d0;
+  border-color: #4264d0;
+  box-shadow: none !important;
+}
+
+.card-body .btn-primary:hover {
+  background: none;
+}
+
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+.selectNavbar {
+  min-width: 118px;
+  justify-content: flex-end;
+}
+
+.my-navbar-container {
+  padding-top: 40px;
+  position: fixed;
+  width: 100%;
+  z-index: 111;
+}
+
 body {
   overflow-X: hidden;
   scroll-behavior: smooth;
@@ -16,6 +55,7 @@ body {
 
 .my-navbar {
   background: transparent;
+  padding: 0;
   width: 100%;
   z-index: 1111;
 }
@@ -44,9 +84,13 @@ body {
   margin-bottom: 30px;
   line-height: calc(2.1rem + 1vw);
 }
+.banner h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
 .banner p {
   font-family: Lato;
-  font-size: 18px;
   font-weight: 500;
   line-height: 21.6px;
   letter-spacing: 0em;
@@ -55,7 +99,7 @@ body {
 
 .sectionWelcome {
   position: relative;
-  height: 85vh;
+  height: 95vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -70,11 +114,10 @@ body {
   position: relative;
   width: 280px;
   color: #fff;
-  font-size: 18px;
   font-weight: 700;
   line-height: 21.6px;
   background: #161618;
-  padding: 20px;
+  padding: 20px !important;
   border: 0;
   text-align: left;
 }
@@ -87,6 +130,8 @@ body {
   border-left: 1px solid;
   padding: 20px;
   color: #92979b;
+  display: grid !important;
+  place-content: center;
 }
 .lpButton:hover {
   background: #4264d0;
@@ -142,7 +187,6 @@ body {
 .infoButton {
   background-color: transparent;
   padding: 0;
-  font-size: 18px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -167,7 +211,6 @@ body {
 
 .infoCardTitleP {
   margin-bottom: 20%;
-  font-size: 18px;
 }
 
 .aboutUsContainer {
@@ -208,10 +251,6 @@ body {
   line-height: 16.8px;
   font-weight: 700;
   margin-bottom: 120px;
-}
-
-.col-half {
-  font-size: 18px;
 }
 
 .col-full {
@@ -298,7 +337,7 @@ body {
   border-right: 2px solid #758edd;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 991px) {
   .footerUl li:nth-child(1) {
     display: none;
   }
@@ -423,88 +462,526 @@ body {
     border-radius: 50%;
   }
 }
-@media only screen and (max-width: 990px) {
-  .line {
-    border-right: none;
-  }
-  .sectionWelcome {
-    height: 100vh;
-  }
-  .banner p {
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 16.8px;
-  }
-  .panelInfo {
-    font-size: 0;
-    height: 32px;
-    padding: 0;
-  }
-  .aboutUsBanner {
-    padding-top: 60px;
-    margin-bottom: 30px;
-  }
-  .aboutUsBanner h1 {
-    text-align: left;
-  }
-  .aboutUsBanner p {
-    position: relative;
-  }
-  .flexButtonsInfo {
-    flex-wrap: wrap;
-    grid-row-gap: 60px;
-  }
-  .flexButtonsInfo .infoCard {
-    padding: 30px;
-  }
-  .aboutUsContainer {
-    margin-top: 60px;
-    padding: 30px 30px 0px 30px;
-  }
-  .aboutUsContainer div {
-    text-align: left;
-  }
-  .aboutUsContainer .aboutUsPanel,
-.aboutUsContainer .aboutUsTitle,
-.aboutUsContainer .aboutUsText {
-    text-align: left;
-    padding: 0;
-  }
-  .aboutUsContainer .footerContainerDivlogo {
-    padding-top: 60px;
-    display: block;
-    height: 100%;
-    margin: 0;
-  }
-  .p {
-    display: none;
-  }
-  .displayOnSmallerScreen {
-    display: block !important;
-  }
-  .aboutUsPanel {
-    padding-bottom: 30px !important;
-  }
-  .aboutUsTitle {
-    margin: 0;
-    text-align: left;
-    padding: 60px 0;
-  }
-  .col-full {
-    font-size: 21px;
-  }
-  .sectionInfo {
-    padding-bottom: 60px;
-  }
-  .footerContainerDivlogo {
-    padding: 30px 0 42px 0;
-    height: 100%;
-    display: block;
-    margin: 0;
-    font-size: 27px;
-    font-weight: 700;
-  }
+.merchantlp {
+  margin-top: 120px !important;
 }
+
+.merchantBanner h1,
+.merchantBanner p {
+  text-align: left;
+}
+
+.merchantButton {
+  margin: 60px 0 !important;
+  justify-content: start;
+}
+
+.textPhoto p {
+  text-align: left;
+}
+
+.testsquare {
+  width: 280px;
+  aspect-ratio: 1/1;
+  border-radius: 10px !important;
+  margin-left: auto;
+}
+
+.textphotoReverse {
+  flex-direction: row-reverse;
+}
+.textphotoReverse .testsquare {
+  margin-left: 0;
+}
+
+.textphotoContainer {
+  min-height: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.benefitsDivContainer {
+  background-color: #4264d0;
+  padding: 60px;
+  min-height: 574px;
+}
+.benefitsDivContainer .row {
+  min-height: 454px;
+  align-items: center;
+}
+
+.merchantPanel {
+  overflow-X: hidden;
+  background-color: #4264d0;
+  color: #fff;
+  padding: 60px;
+}
+
+.benefitsDiv {
+  max-width: 280px;
+  min-height: 156px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: white;
+  font-size: 18px;
+  line-height: 21.6px;
+}
+.benefitsDiv img {
+  width: fit-content;
+}
+.benefitsDiv h3 {
+  font-weight: 700;
+}
+
+.PodfeaturesContainer {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 330px auto;
+}
+.PodfeaturesContainer .row {
+  align-items: center;
+  grid-row-gap: 30px;
+}
+.PodfeaturesContainer h1 {
+  display: grid;
+  place-content: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.podfeaturesimg {
+  margin-right: 20px !important;
+  background: #4264d0;
+  min-width: 60px;
+  max-height: 60px;
+  padding: 20px !important;
+  border-radius: 4px;
+}
+
+.podfeaturestext {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.contactUsShortContainer {
+  background: #4264d0;
+  border-radius: 10px;
+  margin: 180px auto;
+  padding: 87px 100px;
+}
+
+.banner-text-left h1,
+.banner-text-left p {
+  text-align: left;
+  color: #fff;
+}
+
+.contactFormShort .row {
+  grid-row-gap: 20px;
+  width: 100%;
+  margin: 0;
+}
+.contactFormShort input {
+  position: relative;
+  min-height: 60px;
+  width: 100%;
+  padding: 19px 30px;
+  border-radius: 3px;
+  border: 0;
+  outline: 0;
+}
+
+.sendMail {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 40px;
+  width: 169px;
+  font-size: 18px;
+  background: #4264d0;
+}
+
+.dropDownitem {
+  display: flex;
+  flex-wrap: wrap;
+  width: ingerit;
+}
+
+.dropdown-menu.show {
+  width: 100% !important;
+  height: 500px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.blackbox {
+  background: black;
+  border-radius: 10px;
+  width: 280px;
+  height: 280px;
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 50px;
+}
+
+.accordion-button,
+.accordion-body {
+  font-weight: 700;
+  font-size: 24px;
+  color: #161618;
+  padding: 50px 100px;
+}
+
+.accordion-body {
+  font-weight: 500;
+  opacity: 0.6;
+  font-size: 18px;
+}
+
+.banner2 {
+  text-align: center;
+  margin: 120px 93px;
+  font-weight: 700;
+  color: #161618;
+}
+.banner2 h1 {
+  font-size: 42px;
+  margin: 10px 0 30px;
+}
+.banner2 h6 {
+  font-size: 14px;
+  color: #4264d0;
+}
+.banner2 h5 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.priceCardContainer {
+  position: relative;
+  max-width: 280px;
+  min-height: 717px;
+  border-radius: 10px;
+  border: 1px solid #e3e3e3;
+  padding: 50px 30px;
+}
+.priceCardContainer .header {
+  text-align: center;
+  display: grid;
+  grid-template-rows: 30px 17px;
+  border-bottom: 1px solid #eaeaeb;
+  align-items: center;
+  padding-bottom: 30px;
+  grid-row-gap: 10px;
+}
+.priceCardContainer .header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #161618;
+}
+.priceCardContainer .header h3 {
+  font-size: 14px;
+  opacity: 0.4;
+  font-weight: 700;
+  line-height: 20px;
+}
+.priceCardContainer .description {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 30px 0;
+  text-align: center;
+  line-height: 16.8px;
+  border-bottom: 1px solid #eaeaeb;
+}
+.priceCardContainer .banner button {
+  font-size: 14px;
+  font-weight: 700;
+  width: 100%;
+  margin: 30px 0;
+  height: 36px;
+  background-color: #4264d0;
+}
+.priceCardContainer .banner div {
+  display: flex;
+  font-size: 12px;
+  align-items: center;
+}
+.priceCardContainer .banner div p {
+  font-size: 12px;
+  line-height: 14.4px;
+  text-align: left;
+  margin-left: 10px;
+  opacity: 0.4;
+}
+.priceCardContainer .featureBanner {
+  background: #e8e8e8;
+  text-align: center;
+  margin: 30px 0;
+  font-size: 12px;
+  padding: 4px 0px;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  font-weight: 500;
+}
+.priceCardContainer ul {
+  margin-top: 80px;
+  font-size: 14px;
+  font-weight: 500;
+  display: grid;
+  grid-gap: 10px;
+}
+.priceCardContainer ul img {
+  margin-right: 5px;
+}
+
+.bestSeller::before {
+  content: "Best seller";
+  outline: 1px solid #538C8A;
+  content: "Best seller";
+  background-color: #538C8A;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  height: 30px;
+  display: grid;
+  place-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.mytab {
+  margin-bottom: 60px;
+}
+.mytab li button {
+  color: #131318;
+}
+.mytab li:active {
+  border: none !important;
+  outline: none;
+}
+
+.nav-tabs .nav-link {
+  position: relative;
+  border: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #a2a2a4;
+}
+.nav-tabs .active {
+  border: 0;
+  border-bottom: 2px solid #4264d0 !important;
+  color: #4264d0 !important;
+}
+
+#uncontrolled-tab-example-tab-annual:before {
+  content: "Save 20%";
+  display: block;
+  position: absolute;
+  top: -7px;
+  right: 18px;
+  font-size: 12px;
+  color: #538C8A;
+}
+
+.contactBanner {
+  margin: 0;
+  text-align: left;
+}
+.contactBanner h1 {
+  margin-top: 0;
+}
+
+.formExtended {
+  display: grid;
+  grid-row-gap: 10px;
+}
+.formExtended .form-control,
+.formExtended .form-select {
+  padding: 12px 20px;
+  font-weight: 700;
+  font-size: 14px;
+}
+.formExtended button {
+  font-size: 14px;
+  padding: 10px 0;
+  background-color: #4264d0;
+}
+
+.cLong {
+  padding: 75px 100px;
+  border: 1px solid #ebedf0;
+  border-radius: 10px;
+}
+
+.contactInfo {
+  margin-top: 123px;
+  min-height: 160px;
+  display: grid;
+}
+.contactInfo p {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  grid-column-gap: 20px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.ourOffers {
+  margin-top: 180px;
+  margin-bottom: 80px;
+}
+
+.product-features {
+  display: grid;
+}
+.product-features .title {
+  font-weight: 700;
+  font-size: 24px;
+}
+.product-features .list p {
+  padding-left: 20px;
+  padding-top: 15px;
+  border-left: 1px solid #4264d0;
+}
+.product-features .list h1 {
+  font-weight: 700;
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+.product-features .list h1:before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  background-color: #4264d0;
+}
+
+.productList {
+  padding-left: 30%;
+}
+.productList .textphotofeatures {
+  padding: 0;
+  grid-gap: 20px;
+}
+.productList .textphotofeatures div:nth-child(1) {
+  order: 2;
+  padding: 0;
+}
+.productList .textphotofeatures div:nth-child(2) {
+  order: 1;
+  width: auto;
+  padding: 0;
+  display: flex;
+  grid-gap: 7px;
+}
+.productList .textphotofeatures h3 {
+  margin-bottom: 10px;
+}
+.productList .list {
+  margin: 120px 0 180px;
+  min-height: 1120px;
+  display: grid;
+}
+
+.footer,
+.contactUsShortContainer,
+.sendMail {
+  background: #7061C8;
+}
+
+.companiesLP {
+  margin-top: 141px;
+}
+.companiesLP .banner {
+  max-width: 600px;
+  margin: auto;
+}
+.companiesLP .lpButtonCompany {
+  width: 181px;
+  font-weight: normal;
+  margin-top: 60px;
+}
+.companiesLP .benefitsDiv {
+  color: black;
+}
+.companiesLP .benefitsDiv h3 {
+  min-height: 44px;
+  margin-bottom: 18px;
+  margin-top: 60px;
+}
+.companiesLP .title {
+  padding-bottom: 30px !important;
+  border-bottom: 1px solid #e3e3e3;
+  font-size: 24px;
+  font-weight: 700;
+  position: relative;
+  top: 30px;
+}
+
+.company_analytics_img {
+  margin: 200px auto 400px;
+  position: relative;
+  width: fit-content;
+}
+.company_analytics_img:before {
+  content: "";
+  display: block;
+  width: 180px;
+  height: 180px;
+  background: #7061C8;
+  position: absolute;
+  border-radius: 24px;
+  z-index: -1;
+  top: -24px;
+  left: -36px;
+}
+.company_analytics_img:after {
+  content: "";
+  display: block;
+  width: 127px;
+  height: 127px;
+  background: #7061C8;
+  position: absolute;
+  border-radius: 24px;
+  z-index: -1;
+  bottom: -27px;
+  right: -27px;
+}
+
+.companiesCard .priceCardContainer {
+  min-width: 280px;
+}
+.companiesCard .priceCardContainer button {
+  background-color: #7061C8;
+}
+
+.companytab .active {
+  color: #7061C8 !important;
+  border-bottom: 2px solid #7061C8 !important;
+}
+
+.nofixednav {
+  position: relative;
+}
+
+.photoRev .testsquare {
+  margin-left: auto;
+}
+
 .footerListcontainer {
   justify-content: space-between;
   grid-row-gap: 70px;
@@ -536,6 +1013,187 @@ body {
 .pp {
   display: grid !important;
   grid-template-columns: 1fr 1fr;
+}
+
+@media only screen and (max-width: 991px) {
+  .line {
+    border-right: none;
+  }
+  .my-navbar-container {
+    padding-inline: 37px;
+  }
+  .my-navbar-container .my-navbar {
+    min-height: 150px;
+    display: grid;
+    align-items: center;
+    justify-content: flex-start !important;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .my-navbar-container .my-navbar a {
+    margin: 0;
+  }
+  .banner h1 {
+    font-size: 32px !important;
+  }
+  .banner p {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16.8px;
+    padding: 0 37px;
+  }
+  .sectionInfo .container {
+    padding: 0 37px;
+  }
+  .panelInfo {
+    font-size: 0;
+    height: 32px;
+    padding: 0;
+  }
+  .aboutUsBanner {
+    padding-top: 60px;
+    margin-bottom: 30px;
+  }
+  .aboutUsBanner h1 {
+    text-align: left;
+  }
+  .aboutUsBanner p {
+    position: relative;
+    padding: 0;
+  }
+  .flexButtonsInfo {
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-row-gap: 60px;
+  }
+  .flexButtonsInfo .infoCard {
+    padding: 30px;
+  }
+  .aboutUsContainer {
+    margin-top: 60px;
+    padding: 37px;
+  }
+  .aboutUsContainer div {
+    text-align: left;
+  }
+  .aboutUsContainer .aboutUsPanel,
+.aboutUsContainer .aboutUsTitle,
+.aboutUsContainer .aboutUsText {
+    text-align: left;
+    padding: 0;
+  }
+  .aboutUsContainer .footerContainerDivlogo {
+    padding-top: 60px;
+    display: block;
+    height: 100%;
+    margin: 0;
+  }
+  .aboutUsContainer .aboutUsTitle h1 {
+    margin-top: 30px;
+    text-align: left;
+  }
+  .aboutUsInfo {
+    margin-bottom: 60px;
+  }
+  .aboutUsRow {
+    grid-row-gap: 42px;
+  }
+  .p {
+    display: none;
+  }
+  .displayOnSmallerScreen {
+    display: block !important;
+  }
+  .aboutUsPanel {
+    padding-bottom: 30px !important;
+  }
+  .aboutUsTitle {
+    margin: 0;
+    text-align: left;
+    padding: 60px 0;
+  }
+  .col-full {
+    font-size: 21px;
+  }
+  .sectionInfo {
+    padding-bottom: 60px;
+  }
+  .footerContainerDivlogo {
+    padding: 30px 0 42px 0;
+    height: 100%;
+    display: block;
+    margin: 0;
+    font-size: 27px;
+    font-weight: 700;
+  }
+  .sectionWelcome {
+    height: 120vh;
+  }
+  .sectionWelcome .banner {
+    padding: 0 37px !important;
+  }
+  .sectionWelcome .flexButtons .row {
+    width: 100% !important;
+    grid-row-gap: 20px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .sectionInfo .flexButtons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .aboutUsContainer .panel {
+    padding: 0 0 37px !important;
+  }
+  .row * {
+    padding: 0;
+    margin: 0;
+  }
+  .banner p {
+    padding: 0;
+  }
+  .row {
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    padding: 0 37px;
+  }
+  .flexButtons {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    justify-content: start;
+  }
+  .benefitsDivContainer,
+.panel,
+.contactUsShortContainer {
+    padding: 37px !important;
+  }
+  .benefitsDivContainer div,
+.panel div,
+.contactUsShortContainer div {
+    grid-row-gap: 30px;
+  }
+  .textphotoContainer div {
+    padding: 0;
+  }
+  .textphotoContainer div div {
+    padding: 0;
+    grid-row-gap: 30px;
+  }
+  .diagram {
+    width: 100%;
+  }
+  .PodfeaturesContainer {
+    grid-template-rows: 200px auto;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .infoButton {
+    padding-left: 0 !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

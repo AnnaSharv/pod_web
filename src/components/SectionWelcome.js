@@ -10,6 +10,9 @@ import Banner from './Banner.js';
 import Button from './CustomButton.js'
 import AnimatedBG from './AnimatedBG.js'
 
+
+
+
 function SectionWelcome() {
   return (
     <div className="sectionWelcome">
